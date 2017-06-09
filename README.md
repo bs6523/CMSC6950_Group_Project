@@ -5,32 +5,9 @@ Group Members
 1. Name : Sivachandran Bharathi
    Email : bs6523@mun.ca
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3. Name : Boxuan Li
+2. Name : Boxuan Li
    Email : bl5102@mun.ca
+
+3. Name : Gurpreet Singh ;  Username= gsahans
+   Email : gs3041@mun.ca 
+
