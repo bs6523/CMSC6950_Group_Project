@@ -4,5 +4,33 @@ Growing Degree Days Group project
 Group Members
 1. Name : Sivachandran Bharathi
    Email : bs6523@mun.ca
-2. Name : Boxuan Li
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Name : Boxuan Li
    Email : bl5102@mun.ca
