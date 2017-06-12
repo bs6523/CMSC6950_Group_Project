@@ -35,7 +35,7 @@ def download(stationid, year):
     df = data_frame[columns]
     df_rename = df.rename(columns={'Max Temp (°C)':'Max_Temp', 'Min Temp (°C)': 'Min_Temp', 'Mean Temp (°C)': 'Mean_Temp'})
     print("END downloading ...")
-  
+
 
 
 
