@@ -7,9 +7,17 @@ Created on Tue Jun 13 10:40:11 2017
 #plot file
 """
 
+import os
+import urllib.request
+import sys
+import pandas as pd
+from matplotlib import pylab as plt
+import numpy as np
+import download_data as DW
+
 def plot_min_max(stationid, year):
     
-    Citi_name, df_rename = download(stationid, year)
+    Citi_name, df_rename = DW.download(stationid, year)
     #obs2 = download(stationid2, year)
     #obs3 = download(stationid3, year)
 

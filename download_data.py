@@ -1,3 +1,15 @@
+
+import os
+import urllib.request
+import sys
+import pandas as pd
+from matplotlib import pylab as plt
+import numpy as np
+
+
+
+
+
 def download(stationid, year):
     print("Started downloading ...")
     print("Data for station with id {} for year {}".format(stationid, year))
