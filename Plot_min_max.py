@@ -33,7 +33,9 @@ def plot_min_max(stationid, year):
     plt.title(Citi_name, color = "red", size = 15)
     plt.xlabel('Days', color = "green")
     plt.ylabel('Temperature',color = "green")
-    
+    plt.savefig(citi_name)
+    plt.show()
+   
 
 
 stationid1 = 50092
@@ -63,9 +65,3 @@ fig = plt.gcf()
 fig.canvas.set_window_title('Figure 3')
 plt.savefig('Figure3.png')
 plt.clf()
-
-
-
-    
-
-
