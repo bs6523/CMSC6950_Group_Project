@@ -18,14 +18,14 @@ def download(stationid, year):
     print("Download completed...")
  
 
-    print("Download completed...")
-    print("Extracting required columns...")
+    #print("Download completed...")
+    #print("Extracting required columns...")
     
     data_frame = pd.read_csv(fname, skiprows=25, sep=",", encoding="ISO-8859-1")
     columns = [0,1,2,3,5,7,9]
     df = data_frame[columns]
     df_rename = df.rename(columns={'Max Temp (°C)':'Max_Temp', 'Min Temp (°C)': 'Min_Temp', 'Mean Temp (°C)': 'Mean_Temp'})
-    print("END downloading ...")
+    #print("END downloading ...")
     
     #name
     Citi_name = pd.read_csv(fname, nrows=1)

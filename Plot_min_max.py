@@ -18,8 +18,7 @@ def plot_min_max(stationid, year):
     
     y = df_rename['Max Temp (Â°C)']
     y2 = df_rename['Min Temp (Â°C)']
-    
-    
+
     plt.plot(x,y,label="Max Temperature")
     plt.plot(x,y2,label="Min Temperature")
     plt.legend(bbox_to_anchor=(1, 1), loc=1)
@@ -30,12 +29,5 @@ def plot_min_max(stationid, year):
     plt.show()
     
     
-    
 
-stationid1 = 50092
-stationid2 = 50089
-stationid3 = 6842
-year = 2015
-
-plot_min_max(stationid1, year)
 
