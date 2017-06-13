@@ -14,7 +14,6 @@ import pandas as pd
 from matplotlib import pylab as plt
 import numpy as np
 import download_data as DW
-
 def plot_min_max(stationid, year):
     
     Citi_name, df_rename = DW.download(stationid, year)
@@ -34,8 +33,39 @@ def plot_min_max(stationid, year):
     plt.title(Citi_name, color = "red", size = 15)
     plt.xlabel('Days', color = "green")
     plt.ylabel('Temperature',color = "green")
-    plt.show()
     
+
+
+stationid1 = 50092
+stationid2 = 50089
+stationid3 = 6842
+year = 2015
+
+
+    
+
+plot_min_max(stationid1, year)
+fig = plt.gcf()
+fig.canvas.set_window_title('Figure 1')
+plt.savefig('Figure1.png')
+plt.clf()
+
+
+plot_min_max(stationid2, year)
+fig = plt.gcf()
+fig.canvas.set_window_title('Figure 2')
+plt.savefig('Figure2.png')
+plt.clf()
+
+
+plot_min_max(stationid3, year)
+fig = plt.gcf()
+fig.canvas.set_window_title('Figure 3')
+plt.savefig('Figure3.png')
+plt.clf()
+
+
+
     
 
 
