@@ -11,7 +11,7 @@ import numpy as np
 
 
 def download(stationid, year):
-    print("Started downloading ...")
+    print("Downloading in progress ...")
     print("Data for station with id {} for year {}".format(stationid, year))
     
     fname = "{}_{}_t.csv".format(stationid, year)
@@ -27,7 +27,7 @@ def download(stationid, year):
         print("%s" % e)
         return ""
     
-    print("Download completed...")
+    print("Download successful...")
  
 
     #print("Download completed...")
