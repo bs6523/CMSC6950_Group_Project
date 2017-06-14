@@ -9,8 +9,9 @@ Created on Tue Jun 13 11:08:45 2017
 import Plot_min_max as PM
 import Plot_min_max_bokeh as PM_B
 import Plot_GDD as PDD
-import Plot_GDD_bokeh as PDD_B 
+import Plot_GDD_bokeh as PDD_B
 import Plot_gdd_Q2_1 as Q2
+import GDD_bokeh_Q2 as Q2_B
 from bokeh import plotting
 
 
@@ -44,8 +45,8 @@ PDD_B.plot_gdd()
 #Q2.plot_gdd_Q2_1(stationid1, 2015)
 #Q2.plot_gdd_Q2_1(stationid2, 2015)
 #Q2.plot_gdd_Q2_1(stationid3, 2015)
+Q2_B.plot_gdd()
 
 
 
-
-print("main file run successful") 
+print("main file run successful")
