@@ -12,6 +12,7 @@ import Plot_GDD as PDD
 import Plot_GDD_bokeh as PDD_B
 import Plot_gdd_Q2_1 as Q2
 import GDD_bokeh_Q2 as Q2_B
+import Plot_GDD_bokeh_Q2_3 as Q2_3
 from bokeh import plotting
 
 
@@ -47,6 +48,7 @@ PDD_B.plot_gdd()
 #Q2.plot_gdd_Q2_1(stationid3, 2015)
 Q2_B.plot_gdd()
 
-
+# Section 2, question 3
+Q2_3.plot_gdd()
 
 print("main file run successful")
