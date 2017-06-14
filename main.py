@@ -3,7 +3,7 @@
 """
 Created on Tue Jun 13 11:08:45 2017
 
-@author: Bharathi
+@author: Bharathi , gsahans
 
 """
 import Plot_min_max as PM
