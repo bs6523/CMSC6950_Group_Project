@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jun 13 14:35:33 2017
-@authors: Boxuan Li, Augustine Osarogiagbon
+@authors: Boxuan Li
         
 """
 import sys

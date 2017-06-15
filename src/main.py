@@ -22,7 +22,7 @@ start = time.time()
 stationid1 = 50092
 stationid2 = 50089
 stationid3 = 6842
-stationid4 = 6633
+stationid4 = 27378
 year = 2015
 
 
