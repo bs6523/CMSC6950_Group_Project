@@ -27,7 +27,7 @@ def plot_gdd(stationid):
 
     plot=plotting.figure(title=bok_title)
     plot.xaxis.axis_label = 'Year/Time'
-    plot.yaxis.axis_label = 'Accumlated GDD'
+    plot.yaxis.axis_label = 'GDD T-base'
 
     x_data=np.linspace(1,13,12)
 
