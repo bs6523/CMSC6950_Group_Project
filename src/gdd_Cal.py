@@ -11,11 +11,11 @@ import numpy as np
 import download_data as DW
 import math
 
-input_file = sys.argv[1]
-tbase = sys.argv[2]
-tupper = sys.argv[3]
+#input_file = sys.argv[1]
+#tbase = sys.argv[2]
+#tupper = sys.argv[3]
 
-
+tbase=10
 
 def gdd_tot(mean):
      temp = 0.0

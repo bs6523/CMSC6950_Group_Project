@@ -38,3 +38,6 @@ def plot_min_max(stationid, year):
 
     fig.savefig("../plots/"+figure_name) #for saving figure
     plt.show()
+
+
+plot_min_max(50092, 2015)
