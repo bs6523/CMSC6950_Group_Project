@@ -40,4 +40,3 @@ def plot_min_max(stationid, year):
     plt.show()
 
 
-plot_min_max(50092, 2015)
