@@ -32,8 +32,9 @@ Group Members
 2) Python( 3.3.6 )
 3) Latex
 4) HTML
+5) Spyder
 <pre>
-5) Required software to run this program: Spyder    <--- Important notice!!!!
+5) Required software to run this program: ---> Spyder <--- 
 </pre>
 
 
