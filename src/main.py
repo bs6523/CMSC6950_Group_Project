@@ -11,7 +11,6 @@ import Plot_min_max as PM
 import Plot_min_max_bokeh as PM_B
 import Plot_GDD as PDD
 import Plot_GDD_bokeh as PDD_B
-import Plot_gdd_Q2_1 as Q2
 import GDD_bokeh_Q2 as Q2_B
 import Plot_GDD_bokeh_Q2_3 as Q2_3
 from bokeh import plotting
@@ -23,6 +22,7 @@ start = time.time()
 stationid1 = 50092
 stationid2 = 50089
 stationid3 = 6842
+stationid4 = 6633
 year = 2015
 
 
@@ -47,16 +47,25 @@ PDD.plot_gdd(stationid1, 2012)
 
 
 #bokeh
-PDD_B.plot_gdd()
+PDD_B.plot_gdd(stationid1)
+PDD_B.plot_gdd(stationid2)
+PDD_B.plot_gdd(stationid3)
+PDD_B.plot_gdd(stationid4)
 #----------------------------------
 #Section 2, question 1
 #Q2.plot_gdd_Q2_1(stationid1, 2015)
 #Q2.plot_gdd_Q2_1(stationid2, 2015)
 #Q2.plot_gdd_Q2_1(stationid3, 2015)
-Q2_B.plot_gdd()
+Q2_B.plot_gdd(stationid1)
+Q2_B.plot_gdd(stationid2)
+Q2_B.plot_gdd(stationid3)
+Q2_B.plot_gdd(stationid4)
 
 # Section 2, question 3
-Q2_3.plot_gdd()
+Q2_3.plot_gdd(stationid1)
+Q2_3.plot_gdd(stationid2)
+Q2_3.plot_gdd(stationid3)
+Q2_3.plot_gdd(stationid4)
 
 stop = time.time()                  # stop timer
 print("measured Runtime: {:.3f} seconds".format(stop-start))

@@ -37,9 +37,12 @@ Group Members
 1) Downloading data from government website.
 2) Calculating useful data (Min-Max tempurature, GDD and so on) in different cities for different years.
 3) Creating plots via bokeh and pylot that howing the data.
-4) Storing data and graphs
+4) Storing data and graphs.
 5) Presenting our work.
 
-
+3. File system
+1) "src" : folder that contain ource code for the whole project.
+2) "Data_csv" : folder store data files.
+3) "plots" : storing plots that produced by the project
 
 
