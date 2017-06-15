@@ -6,7 +6,6 @@
 
 # This code implements bokeh graph of GDD over T-base for selected canadian cities.
 
-import gdd_Cal as GD
 import gdd_Cal_Q2_3 as GDQ23
 import numpy as np
 from bokeh import plotting
@@ -14,7 +13,7 @@ import os
 import download_data as DW
 
 
-def plot_gdd():
+def plot_gdd(stationid):
 
     Citi_name, temp = DW.download(stationid, 2014)
 

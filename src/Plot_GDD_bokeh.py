@@ -12,13 +12,13 @@ import os
 import download_data as DW
 
 
-def plot_gdd():
+def plot_gdd(stationid):
 
     Citi_name, temp = DW.download(stationid, 2014)
 
-    gdd1 = GD.gdd_cal_accum(stationid1, 2015)
-    gdd2 = GD.gdd_cal_accum(stationid2, 2014)
-    gdd3 = GD.gdd_cal_accum(stationid3, 2013)
+    gdd1 = GD.gdd_cal_accum(stationid, 2015)
+    gdd2 = GD.gdd_cal_accum(stationid, 2014)
+    gdd3 = GD.gdd_cal_accum(stationid, 2013)
     gdd4 = GD.gdd_cal_accum(stationid, 2016)
 
     figure_name = "Bokeh_GDD-Accum_{}.html".format(stationid)
