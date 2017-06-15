@@ -1,0 +1,9 @@
+                        	test1	test2	test3	average
+serial (no multiprocessing)	10.377	10.425	10.483	10.428
+6 processes	                 6.321	5.875	5.907	6.034
+5 Processes			 6.129	6.935	6.083	6.382
+4 Processes			 6.036	5.854	5.845	5.912
+3 Processes			 6.52	6.295	5.928	6.248
+2 Processes			 9.361	7.374	7.195	7.977
+1 Process	                 9.913	10.503	9.973	10.130
+
