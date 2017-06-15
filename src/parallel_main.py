@@ -1,3 +1,6 @@
+
+
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from multiprocessing import Pool
@@ -21,6 +24,7 @@ from bokeh import plotting
 import time
 
 
+
 start = time.time()                 # start timer
 
 
@@ -36,15 +40,13 @@ x1=[stationid1, stationid2, stationid3]
 y1=[2015, 2014, 2013, 2012]
 
 def P_func1(x1):
-	PM.plot_min_max(x1, year)
+        PM.plot_min_max(x1, year)
 
 def P_func2(x1):
-	PM_B.plot_min_max(x1, year)
+        PM_B.plot_min_max(x1, year)
 
 def P_func3(y1):
-	PDD.plot_gdd(stationid1, y1)
-
-
+        PDD.plot_gdd(stationid1, y1)
 
 
 Par_comp = Pool(1)
@@ -62,6 +64,7 @@ Par_comp.map(P_func3, y1)
 PDD_B.plot_gdd()
 #----------------------------------
 
+
 #Section 2, question 1
 #Q2.plot_gdd_Q2_1(stationid1, 2015)
 #Q2.plot_gdd_Q2_1(stationid2, 2015)
@@ -75,7 +78,8 @@ Q2_3.plot_gdd()
 
 stop = time.time()                  # stop timer
 print("measured Runtime: {:.3f} seconds".format(stop-start))
-print(20*"-"+"\n") 
+print(20*"-"+"\n")
 
 
 print("main file run successful")
+
