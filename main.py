@@ -25,7 +25,6 @@ stationid2 = 50089
 stationid3 = 6842
 year = 2015
 
-start = time.time()
 
 #--------------------------------
 #calling min_max function
