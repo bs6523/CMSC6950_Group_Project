@@ -9,6 +9,7 @@ Created on Tue Jun 13 10:40:11 2017
 from matplotlib import pylab as plt
 import numpy as np
 import download_data as DW
+
 def plot_min_max(stationid, year):
     
     #calling the download function and geting the table and citi name
@@ -32,5 +33,7 @@ def plot_min_max(stationid, year):
     plt.title(Citi_name, color = "red", size = 15)
     plt.xlabel('Days', color = "green")
     plt.ylabel('Temperature',color = "green")
+    
     fig.savefig(figure_name) #for saving figure 
+    plt.show()
     
