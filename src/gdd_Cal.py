@@ -11,22 +11,19 @@ import numpy as np
 import download_data as DW
 import math
 
-<<<<<<< HEAD
+
 File_name = sys.argv[1]
 tbase = sys.argv[2]
 tupper = sys.argv[3]
 
 
 def gdd_tot_SB(mean, tbase):
-=======
-#input_file = sys.argv[1]
-#tbase = sys.argv[2]
-#tupper = sys.argv[3]
 
-tbase=10
+
+
 
 def gdd_tot(mean):
->>>>>>> b433aa92b346be9ff918800631513414c7976878
+
      temp = 0.0
      for i in mean:
          if i < tbase:
