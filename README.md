@@ -1,5 +1,6 @@
-# CMSC6950_Group_Project
-Growing Degree Days Group project
+# CMSC6950_Group_Project --- Growing Degree Days in Canada
+
+The goal of this project is to calculate GDD for some cities in Canada 
 
 Group Members
 1. Name : Sivachandran Bharathi
@@ -20,4 +21,25 @@ Group Members
 
 6. Name : Adeoya Adebayo
    Email : aoa251@mun.ca
+   
+
+################################################################################################# 
+
+
+1. System Requirenments:
+   
+. Linux/Mac/Windows
+. Python( 3.3.6 )
+. Latex
+. HTML
+
+2. Workflow
+. Downloading data from government website.
+. Calculating useful data (Min-Max tempurature, GDD and so on) in different cities for different years.
+. Creating plots via bokeh and pylot that howing the data.
+. Storing data and graphs
+. Presenting our work.
+
+
+
 
