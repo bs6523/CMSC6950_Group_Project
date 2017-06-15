@@ -33,4 +33,4 @@ def plot_min_max(stationid, year):
     plt.xlabel('Days', color = "green")
     plt.ylabel('Temperature',color = "green")
     fig.savefig(figure_name) #for saving figure 
-    plt.show()
+    
