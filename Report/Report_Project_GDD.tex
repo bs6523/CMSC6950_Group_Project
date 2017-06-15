@@ -133,7 +133,7 @@ The base temperature is that temperature below which plant growth is zero. GDs a
 This are the list of cities we used for this project:
 \begin{enumerate}
 \item St. John's Newfoundland.
-\item Toronto, Ontario.
+\item Ontario Toronto.
 \item British Columbia.
 \end{enumerate}
 \label{sec:examples}
@@ -142,66 +142,39 @@ This are the list of cities we used for this project:
 The aim of this section is to download the historical temperature of several cities from the climate.weather database of Canada. The code below extracts the weather informations for the Station Ids, which we will use for the subsequent tasks in this project.   
 
 \begin{lstlisting}[language=Python]
-import numpy as np
- 
-def incmatrix(genl1,genl2):
-    m = len(genl1)
-    n = len(genl2)
-    M = None #to become the incidence matrix
-    VT = np.zeros((n*m,1), int)  #dummy variable
- 
-    #compute the bitwise xor matrix
-    M1 = bitxormatrix(genl1)
-    M2 = np.triu(bitxormatrix(genl2),1) 
- 
-    for i in range(m-1):
-        for j in range(i+1, m):
-            [r,c] = np.where(M2 == M1[i,j])
-            for k in range(len(r)):
-                VT[(i)*n + r[k]] = 1;
-                VT[(i)*n + c[k]] = 1;
-                VT[(j)*n + r[k]] = 1;
-                VT[(j)*n + c[k]] = 1;
- 
-                if M is None:
-                    M = np.copy(VT)
-                else:
-                    M = np.concatenate((M, VT), 1)
- 
-                VT = np.zeros((n*m,1), int)
- 
-    return M
+def download(stationid, year):
+    
+    
+    print("Data for station with id {} for year {}".format(stationid, year))
+    
+    
+    File_name = "{}_{}_t.csv".format(stationid, year)  #file name for the CSV
+    url = "http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID="+str(stationid)+"&Year="+str(year)+"&Month=8&Day=1&timeframe=2&submit=Download+Data"
+
+    #downloading the file from the URL, and Saving into CSV file
+    if(os.path.exists('../Data_csv/'+File_name)): #download only if the file not Exists
+        print("File Exists")
+    else:
+        print("Downloading in progress ...")
+        try:
+            urllib.request.urlretrieve(url, '../Data_csv/'+File_name)
+        except FileNotFoundError as fnfe:
+            print("File not found..")
+            print("%s" % fnfe)
+            return ""
+        except Exception as e:
+            print("%s" % e)
+            return ""
+            
+        print("Download Completed...")
+        
 \end{lstlisting}
 
 \subsection{Annual Cycle of Min/Max Daily Temperatures Plots }
 In this subsection, we used the downloaded data from the earlier task to create a 3 plots of the selected Canadian cities showing an annual cycle of the minimum or maximum daily temperatures. The min and max temperatures will be used when calculating the GDD in the next task. \\
-Below are the codes and min/max plots for our 3 selected cities:\\
+When the min-max function is called, the download function gets the information from the station id and year supplied. From the database extracted, we get the min and max temperature  which will be used for the plots. 
+Below are the min/max plots for our 3 selected cities:\\
 
-\begin{lstlisting}[language=Python]
-import gdd_Cal as GD
-from matplotlib import pylab as plt
-import numpy as np
-
-
-def plot_gdd(stationid, year):
-    
-   
-    #for in ra
-    
-    gdd = GD.gdd_cal_accum(stationid, year)
-    figure_name = "Fig_GDD_{}.png".format(stationid)
-    
-    
-    x = np.linspace(1,13,12)
-    fig= plt.figure(num=1, figsize=(10,6))
-    plt.title("accumulated GDD")
-    plt.plot(x,gdd, label = year)
-    plt.xlabel("Year/Time")
-    plt.ylabel("accumulated GDD")
-    plt.legend(bbox_to_anchor=(1, 1), loc=1)
-    
-    fig.savefig(figure_name)
-\end{lstlisting}
 
 \includegraphics[scale=0.35]{Fig_6842_2015.png}\\
 
@@ -226,7 +199,6 @@ import download_data as DW
 import math
 
 
-
 def gdd_tot(mean):
      temp = 0.0
      for i in mean:
@@ -237,7 +209,9 @@ def gdd_tot(mean):
      return temp
 
 \end{lstlisting}
-
+With the gdd-total function, we created a function gdd-cal which will calculate the accumulated gdd for each month using the gdd-total and the gdd-accum will calculate the total of of all the months  .\\
+The data calculated will be used to plot the graphs in the next task.
+  
 \subsection{Plots Showing Accumulated GDD vs Time for\\ Selected Cities}
 
 Here we use the results from our calculation above to create plots showing the accumulate GDD vs Time for selected cities. 
