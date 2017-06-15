@@ -4,7 +4,7 @@
 @author: Boxuan Li
 """
 
-# This code implements bokeh graph of GDD over T-base for selected canadian cities
+# This code implements bokeh graph of GDD over T-base for selected canadian cities.
 
 import gdd_Cal as GD
 import gdd_Cal_Q2_3 as GDQ23
