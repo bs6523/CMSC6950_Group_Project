@@ -32,6 +32,10 @@ Group Members
 2) Python( 3.3.6 )
 3) Latex
 4) HTML
+<pre>
+5) Required software to run this program: Spyder    <--- Important notice!!!!
+</pre>
+
 
 2. Workflow
 1) Downloading data from government website.
