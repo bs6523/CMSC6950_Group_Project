@@ -17,9 +17,9 @@ def plot_gdd(stationid):
 
     Citi_name, temp = DW.download(stationid, 2014)
 
-    gdd1 = GD.gdd_cal(stationid1, 2015)
-    gdd2 = GD.gdd_cal(stationid2, 2014)
-    gdd3 = GD.gdd_cal(stationid3, 2013)
+    gdd1 = GD.gdd_cal(stationid, 2015)
+    gdd2 = GD.gdd_cal(stationid, 2014)
+    gdd3 = GD.gdd_cal(stationid, 2013)
     gdd4 = GD.gdd_cal(stationid, 2016)
 
     figure_name = "Bokeh_GDD_{}.html".format(stationid)
