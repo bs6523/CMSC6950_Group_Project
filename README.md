@@ -27,18 +27,18 @@ Group Members
 
 
 1. System Requirenments:
-   
-. Linux/Mac/Windows
-. Python( 3.3.6 )
-. Latex
-. HTML
+   
+1) Linux/Mac/Windows
+2) Python( 3.3.6 )
+3) Latex
+4) HTML
 
 2. Workflow
-. Downloading data from government website.
-. Calculating useful data (Min-Max tempurature, GDD and so on) in different cities for different years.
-. Creating plots via bokeh and pylot that howing the data.
-. Storing data and graphs
-. Presenting our work.
+1) Downloading data from government website.
+2) Calculating useful data (Min-Max tempurature, GDD and so on) in different cities for different years.
+3) Creating plots via bokeh and pylot that howing the data.
+4) Storing data and graphs
+5) Presenting our work.
 
 
 
