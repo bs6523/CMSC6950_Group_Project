@@ -3,18 +3,24 @@
 """
 Created on Tue Jun 13 14:35:33 2017
 
-@author: Boxuan Li
+@authors: Boxuan Li, Augustine Osarogiagbon
+        
 """
+import sys
 import numpy as np
 import download_data as DW
 import math
+
+input_file = sys.argv[1]
+tbase = sys.argv[2]
+tupper = sys.argv[3]
 
 
 
 def gdd_tot(mean):
      temp = 0.0
      for i in mean:
-         if i < 10.0:
+         if i < tbase:
              temp = temp + 0.0
          elif not math.isnan(i) :
              temp = temp + (i - 10.0)
