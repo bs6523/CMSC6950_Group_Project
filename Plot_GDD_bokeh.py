@@ -5,7 +5,6 @@
 """
 # This code calculates accumulated GDD vs time for selected canadian cities
 
-
 import gdd_Cal as GD
 import numpy as np
 from bokeh import plotting
