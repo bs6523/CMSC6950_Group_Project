@@ -139,36 +139,9 @@ This are the list of cities we used for this project:
 \label{sec:examples}
 
 \subsection{Download daily historical temperature}
-The aim of this section is to download the historical temperature of several cities from the climate.weather database of Canada. The code below extracts the weather informations for the Station Ids, which we will use for the subsequent tasks in this project.   
+The aim of this section is to download the historical temperature of several cities from the climate.weather database of Canada. The download class in our code extracts the weather informations for the Station Ids, which we will use for the subsequent tasks in this project.   
 
-\begin{lstlisting}[language=Python]
-def download(stationid, year):
-    
-    
-    print("Data for station with id {} for year {}".format(stationid, year))
-    
-    
-    File_name = "{}_{}_t.csv".format(stationid, year)  #file name for the CSV
-    url = "http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID="+str(stationid)+"&Year="+str(year)+"&Month=8&Day=1&timeframe=2&submit=Download+Data"
 
-    #downloading the file from the URL, and Saving into CSV file
-    if(os.path.exists('../Data_csv/'+File_name)): #download only if the file not Exists
-        print("File Exists")
-    else:
-        print("Downloading in progress ...")
-        try:
-            urllib.request.urlretrieve(url, '../Data_csv/'+File_name)
-        except FileNotFoundError as fnfe:
-            print("File not found..")
-            print("%s" % fnfe)
-            return ""
-        except Exception as e:
-            print("%s" % e)
-            return ""
-            
-        print("Download Completed...")
-        
-\end{lstlisting}
 
 \subsection{Annual Cycle of Min/Max Daily Temperatures Plots }
 In this subsection, we used the downloaded data from the earlier task to create a 3 plots of the selected Canadian cities showing an annual cycle of the minimum or maximum daily temperatures. The min and max temperatures will be used when calculating the GDD in the next task. \\
@@ -256,6 +229,7 @@ Profiling the "main" which executes the core task, question 1 secondary task and
 
 \includegraphics[scale=0.5]{Screen_Shot_16.png}\\
 
-
+In Summary, the project developed an application which  takes in historical temperature data from Canadian cities, processes the data and computes the GDD  for the cities, and the years in which the data where obtained. This was used to plot graphs and will aid in future prediction of plant growth.\\
+In the end we learnt a lot of lessons and this includes: Collaborative project building using Git Hub, working with Phython in parallel processing, python web interaction, and function development which enabled us execute the required tasks for this project. 
 
 \end{document}
