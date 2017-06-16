@@ -121,7 +121,6 @@ Gdd accumulated:
 
 <iframe src=plots/Bokeh_GDD-Accum_27378.html width="720" height="602"></iframe>
 
-
 ---
 
 Gdd Plot:
@@ -131,67 +130,8 @@ Gdd Plot:
 ---
 GDD over Tbase:
 
-<iframe src=plots/Bokeh_GDD_tbase50092.html width="720" height="602"></iframe>
+<iframe src=plots/Bokeh_GDD_tbase50092.html width="720" height="602"></iframe>      
 
----
-      
-The “main.py” which executes the core task, question 1 of secondary task and question 3 of secondary task, primarily spends it's time downloading data, computing GDD and plotting.
-
-
-Fortunately the task can be parallelized based on cities and years.
-
-x1=[stationid1, stationid2, stationid3]
-y1=[2015, 2014, 2013, 2012]
-x2=[stationid1, stationid2, stationid3, stationid4]
-
-#calling min_max function
-P_func1(x1)  
-
-#bokeh
-P_func2(x1)
-
-#calling gdd plot
-P_func3(y1)
-
-#2nd set for bokeh
-P_func4(x2)
-
-#Section 2, question 1
-def P_func5(x2)
-
-#Section 2, question 3
-def P_func6(x2)      
-      
----
-#  MULTI PROCESSING EXECUTION
-#......................................
-
-Par_comp = Pool(5)                      # number of processes
-Par_comp.map(P_func1, x1)
-Par_comp.map(P_func2, x1)
-Par_comp.map(P_func3, y1)
-Par_comp.map(P_func4, x2)
-Par_comp.map(P_func5, x2)
-Par_comp.map(P_func6, x2)
-
-
-Test time in seconds 					
-		test1 	test2 	test3 	average 	speedup
-
-	serial 
-(no multiprocessing) 	8.830 	8.911 	8.761 	8.834 	1.000
-	1 Process 	8.832 	9.043 	9.041 	8.972 	0.985
-	2 Processes 	4.987 	5.385 	4.638 	5.003 	1.766
-	3 Processes 	4.121 	4.335 	4.300 	4.252 	2.078
-	4 Processes 	3.054 	3.245 	3.307 	3.202 	2.759
-	5 Processes 	3.184 	3.241 	3.087 	3.171 	2.786
-	6 Processes 	4.010 	3.172 	3.074 	3.419 	2.584
-
-
-
-
-computation time generally reduced as number of processes increase
-overhead associated with multprocessing       
 ---
 #  MULTI PROCESSING EXECUTION
 
