@@ -139,36 +139,9 @@ This are the list of cities we used for this project:
 \label{sec:examples}
 
 \subsection{Download daily historical temperature}
-The aim of this section is to download the historical temperature of several cities from the climate.weather database of Canada. The code below extracts the weather informations for the Station Ids, which we will use for the subsequent tasks in this project.   
+The aim of this section is to download the historical temperature of several cities from the climate.weather database of Canada. The download class in our code extracts the weather informations for the Station Ids, which we will use for the subsequent tasks in this project.   
 
-\begin{lstlisting}[language=Python]
-def download(stationid, year):
-    
-    
-    print("Data for station with id {} for year {}".format(stationid, year))
-    
-    
-    File_name = "{}_{}_t.csv".format(stationid, year)  #file name for the CSV
-    url = "http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID="+str(stationid)+"&Year="+str(year)+"&Month=8&Day=1&timeframe=2&submit=Download+Data"
 
-    #downloading the file from the URL, and Saving into CSV file
-    if(os.path.exists('../Data_csv/'+File_name)): #download only if the file not Exists
-        print("File Exists")
-    else:
-        print("Downloading in progress ...")
-        try:
-            urllib.request.urlretrieve(url, '../Data_csv/'+File_name)
-        except FileNotFoundError as fnfe:
-            print("File not found..")
-            print("%s" % fnfe)
-            return ""
-        except Exception as e:
-            print("%s" % e)
-            return ""
-            
-        print("Download Completed...")
-        
-\end{lstlisting}
 
 \subsection{Annual Cycle of Min/Max Daily Temperatures Plots }
 In this subsection, we used the downloaded data from the earlier task to create a 3 plots of the selected Canadian cities showing an annual cycle of the minimum or maximum daily temperatures. The min and max temperatures will be used when calculating the GDD in the next task. \\
@@ -180,7 +153,15 @@ Below are the min/max plots for our 3 selected cities:\\
 
 \includegraphics[scale=0.35]{Fig_50089_2015.png}\\
 
-\includegraphics[scale=0.35]{Fig_50092_2015.png}
+\includegraphics[scale=0.35]{Fig_50092_2015.png}\\
+
+Plotting with Bokeh plot\\
+
+\includegraphics[scale=0.35]{Screen_Shot_1.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_2.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_3.png}\\
+
+
 
 \subsection{Calculating the GDD}
 
@@ -190,14 +171,13 @@ GDD can be calculated using this formulae:
 
 $$GDD={\frac  {T_{{\mathrm  {max}}}+T_{{\mathrm  {min}}}}{2}}-T_{{\mathrm  {base}}}. $$\
 
-The code below is for calculating GDD:
---Note this is not all the code--
+The code below is for calculating GDD:\\
+--Note this is not all the code--\\
 
 \begin{lstlisting}[language=Python]
 import numpy as np
 import download_data as DW
 import math
-
 
 def gdd_tot(mean):
      temp = 0.0
@@ -209,6 +189,7 @@ def gdd_tot(mean):
      return temp
 
 \end{lstlisting}
+
 With the gdd-total function, we created a function gdd-cal which will calculate the accumulated gdd for each month using the gdd-total and the gdd-accum will calculate the total of of all the months  .\\
 The data calculated will be used to plot the graphs in the next task.
   
@@ -217,10 +198,38 @@ The data calculated will be used to plot the graphs in the next task.
 Here we use the results from our calculation above to create plots showing the accumulate GDD vs Time for selected cities. 
 
 \includegraphics[scale=0.35]{Fig_GDD_50092.png}\\
+
+Bokeh Plots:\\
+
+\includegraphics[scale=0.35]{Screen_Shot_4.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_5.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_6.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_7.png}\\
   
 
 \subsection{Secondary Tasks}
+The plots below for showing GDD:\\
 
+\includegraphics[scale=0.35]{Screen_Shot_8.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_9.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_10.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_11.png}\\
 
+Exploring how GDD calculations depends on the choice of Tbase:\\
+
+\includegraphics[scale=0.35]{Screen_Shot_12.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_13.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_14.png}\\
+\includegraphics[scale=0.35]{Screen_Shot_15.png}\\
+
+Time/profile your work flow and estimate the amount of time spent in each step. Explore parallelization to make your work flow execute more quickly.\\
+
+Profiling the "main" which executes the core task, question 1 secondary task and question 3 of secondary task, shows that the function executing data downloads and computation takes bulk of the execution time. Fortunately, the project required GDD computation for different cities and years. this presents an opportunity for parallelization because computation for one city is independent of another and computation for one year is independent of other years. A parallel implementation of the project based on the number of cities and years is given by the the file "Parallel-main".\\
+ The parallel implementation was executed using 1 process, 2 process, 3 process, 4 process, 5 process, 6 process on a computer with 6-cores. The performance of the different number of processes in comparison to the serial implementation (with multiprocessing is given in the table 1 below). The result shows the computation time generally reduced as number of processes increased, although the best performance was obtained using 5 processes. There is usually overhead associated with multiprocessing which could increase with the number of processes running , this may explain why speedup may not perfectly scale up with number of processes used.  
+
+\includegraphics[scale=0.5]{Screen_Shot_16.png}\\
+
+In Summary, the project developed an application which  takes in historical temperature data from Canadian cities, processes the data and computes the GDD  for the cities, and the years in which the data where obtained. This was used to plot graphs and will aid in future prediction of plant growth.\\
+In the end we learnt a lot of lessons and this includes: Collaborative project building using Git Hub, working with Phython in parallel processing, python web interaction, and function development which enabled us execute the required tasks for this project. 
 
 \end{document}
