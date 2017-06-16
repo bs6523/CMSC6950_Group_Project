@@ -249,7 +249,12 @@ Exploring how GDD calculations depends on the choice of Tbase:\\
 \includegraphics[scale=0.35]{Screen_Shot_14.png}\\
 \includegraphics[scale=0.35]{Screen_Shot_15.png}\\
 
+Time/profile your work flow and estimate the amount of time spent in each step. Explore parallelization to make your work flow execute more quickly.\\
 
+Profiling the "main" which executes the core task, question 1 secondary task and question 3 of secondary task, shows that the function executing data downloads and computation takes bulk of the execution time. Fortunately, the project required GDD computation for different cities and years. this presents an opportunity for parallelization because computation for one city is independent of another and computation for one year is independent of other years. A parallel implementation of the project based on the number of cities and years is given by the the file "Parallel-main".\\
+ The parallel implementation was executed using 1 process, 2 process, 3 process, 4 process, 5 process, 6 process on a computer with 6-cores. The performance of the different number of processes in comparison to the serial implementation (with multiprocessing is given in the table 1 below). The result shows the computation time generally reduced as number of processes increased, although the best performance was obtained using 5 processes. There is usually overhead associated with multiprocessing which could increase with the number of processes running , this may explain why speedup may not perfectly scale up with number of processes used.  
+
+\includegraphics[scale=0.5]{Screen_Shot_16.png}\\
 
 
 
