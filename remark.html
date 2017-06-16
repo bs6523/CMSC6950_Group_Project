@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    		<meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<title>A PROJECT FOR CALCULATING GROWING DEGREE DAYS (GDD) IN CANADA</title>
-    		<style>
+		<style>
 			body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -73,9 +73,9 @@ code {
 class: center, middle
 background-image: url(img2.jpg) 
 background-size: contain
-
+   
 ### A PROJECT FOR CALCULATING GROWING DEGREE DAYS (GDD) IN CANADA
-         
+             
 ---
 
 ### Introduction
@@ -122,11 +122,12 @@ def gdd_tot(mean):
 ---
 
 ### Data Visualization
+
 <img src="/home/solidbay/group_project/Fig_50092_2015.png" width="720" height="402"/>
 
 ---
 
-Bharathi
+
 
 <img src="/home/solidbay/group_project/1.png" width="720" height="402"/>
 
@@ -141,7 +142,6 @@ Bharathi
 <img src="/home/solidbay/group_project/3.png" width="720" height="602"/>
 
 ---
-Boxuan Li
 
 
 <img src="/home/solidbay/group_project/Page1.png" width="720" height="402"/>
@@ -168,39 +168,103 @@ Gdd Plot
 
 
 GDD over Tbase
-```html
+
 <iframe src=https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_GDD_tbase50092.html></iframe>
-```
----
-
-### Data Visualization
-
-<iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_Min-Max_50089.html" width="720" height="602"></iframe>
 
 ---
 
-### Min-Max
+Data Visualization:
+
+<iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_Min-Max_50089.html"></iframe>
+
+---
+
+Min-Max:
 
 <iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_Min-Max_6842.html">
 </iframe>
 
 ---
-###Gdd accumulated
+
+Gdd accumulated:
 
 <iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_GDD-Accum_27378.html"></iframe>
 
 
 ---
 
-### Gdd Plot
+Gdd Plot:
 
 <iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_GDD_50089.html"></iframe>
 
 ---
-###GDD over Tbase
+GDD over Tbase:
+
 <iframe src="https://github.com/bs6523/CMSC6950_Group_Project/blob/master/plots/Bokeh_GDD_tbase50092.html"></iframe>
 
+---
 
+The “main.py” which executes the core task, question 1 of secondary task and question 3 of secondary task, primarily spends it's time downloading data, computing GDD and plotting.
+
+
+Fortunately the task can be parallelized based on cities and years.
+
+x1=[stationid1, stationid2, stationid3]
+
+y1=[2015, 2014, 2013, 2012]
+
+x2=[stationid1, stationid2, stationid3, stationid4]
+
+###calling min_max function
+
+P_func1(x1)  
+
+###bokeh
+
+P_func2(x1)
+
+###calling gdd plot
+
+P_func3(y1)
+
+###2nd set for bokeh
+
+P_func4(x2)
+
+###Section 2, question 1
+
+def P_func5(x2)
+
+###Section 2, question 3
+
+def P_func6(x2)      
+
+---
+
+###  MULTI PROCESSING EXECUTION
+
+<img src="/home/solidbay/Group_Project/CMSC6950_Group_Project/processor_1.png" width="720" height=""/>
+
+
+
+<img src="/home/solidbay/Group_Project/CMSC6950_Group_Project/processor1.png" width="720" height="220"/>
+
+---
+
+<img src="/home/solidbay/Group_Project/CMSC6950_Group_Project/processor.png" width="720" height="402"/>
+
+
+
+---
+
+### Mark Down-to_Slide HTML Hosting on Github
+
+<img src="/home/solidbay/Group_Project/CMSC6950_Group_Project/slide1.png" width="720" height="402"/>
+
+
+<img src="/home/solidbay/Group_Project/CMSC6950_Group_Project/slide2.png" width="720" height="402"/>
+
+ 
 
 
 
