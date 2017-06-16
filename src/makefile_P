@@ -1,0 +1,2 @@
+project_multiprocesses: Parallel_Main.py
+	python Parallel_Main.py
