@@ -1,4 +1,4 @@
-project: main.py 
+Project_serial: main.py 
 	python main.py
 
  
