@@ -3,37 +3,38 @@ Thu Jun 15 20:00:10 2017    output_main.prof
          9376440 function calls (9086446 primitive calls) in 22.773 seconds
 
    Ordered by: internal time
-   List reduced from 9488 to 30 due to restriction <30>
+   List reduced from 9307 to 30 due to restriction <30>
 
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
         3    7.613    2.538    7.926    2.642 {built-in method exec_}
         7    0.957    0.137    0.957    0.137 {built-in method matplotlib._png.write_png}
-   101550    0.720    0.000    3.702    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:256(prepare_value)
+   101550    0.720    0.000    3.702    0.000 bases.py:256(prepare_value)
 1097880/1097035    0.465    0.000    0.613    0.000 {built-in method builtins.isinstance}
 407656/268943    0.458    0.000    4.928    0.000 {built-in method builtins.getattr}
 334168/332913    0.338    0.000    0.380    0.000 {built-in method builtins.hasattr}
-    78911    0.320    0.000    0.614    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:351(validate)
-60253/60244    0.284    0.000    0.888    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/properties.py:1250(validate)
-91916/86393    0.243    0.000    5.695    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/descriptors.py:646(_get_default)
- 1484/348    0.230    0.000    0.462    0.001 /home/user/swc-conda/lib/python3.6/sre_parse.py:469(_parse)
-93234/87711    0.206    0.000    5.051    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:132(themed_default)
+    78911    0.320    0.000    0.614    0.000 bases.py:351(validate)
+60253/60244    0.284    0.000    0.888    0.000 properties.py:1250(validate)
+91916/86393    0.243    0.000    5.695    0.000 descriptors.py:646(_get_default)
+ 1484/348    0.230    0.000    0.462    0.001 sre_parse.py:469(_parse)
+93234/87711    0.206    0.000    5.051    0.000 bases.py:132(themed_default)
       148    0.178    0.001    0.221    0.001 {method 'read' of 'pandas.parser.TextReader' objects}
-40985/39081    0.174    0.000    1.559    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/properties.py:669(validate)
-100455/87822    0.171    0.000    0.292    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/model.py:702(_visit_value_and_its_immediate_references)
-131822/126299    0.171    0.000    5.895    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/descriptors.py:618(_get)
+40985/39081    0.174    0.000    1.559    0.000 properties.py:669(validate)
+100455/87822    0.171    0.000    0.292    0.000 model.py:702(_visit_value_and_its_immediate_references)
+131822/126299    0.171    0.000    5.895    0.000 descriptors.py:618(_get)
       938    0.161    0.000    0.161    0.000 {built-in method marshal.loads}
-   101550    0.152    0.000    0.395    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:241(_wrap_container)
-91916/86393    0.141    0.000    5.253    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/descriptors.py:524(instance_default)
+   101550    0.152    0.000    0.395    0.000 bases.py:241(_wrap_container)
+91916/86393    0.141    0.000    5.253    0.000 descriptors.py:524(instance_default)
 65019/64577    0.137    0.000    0.376    0.000 {method 'join' of 'str' objects}
-    93396    0.134    0.000    0.135    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/has_props.py:202(accumulate_dict_from_superclasses)
+    93396    0.134    0.000    0.135    0.000 has_props.py:202(accumulate_dict_from_superclasses)
    132100    0.134    0.000    0.217    0.000 <frozen importlib._bootstrap>:402(parent)
-102156/83044    0.133    0.000    1.280    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:224(is_valid)
-    94470    0.128    0.000    0.219    0.000 /home/user/swc-conda/lib/python3.6/copy.py:66(copy)
-       45    0.125    0.003    0.290    0.006 /home/user/swc-conda/lib/python3.6/json/encoder.py:204(iterencode)
+102156/83044    0.133    0.000    1.280    0.000 bases.py:224(is_valid)
+    94470    0.128    0.000    0.219    0.000 copy.py:66(copy)
+       45    0.125    0.003    0.290    0.006 encoder.py:204(iterencode)
     28489    0.119    0.000    0.119    0.000 {built-in method numpy.core.multiarray.array}
-97327/90238    0.117    0.000    1.510    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/bases.py:111(_copy_default)
-    12393    0.105    0.000    5.142    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/model.py:685(_visit_immediate_value_references)
-    42361    0.103    0.000    0.103    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/containers.py:92(__init__)
-162104/156581    0.102    0.000    5.992    0.000 /home/user/swc-conda/lib/python3.6/site-packages/bokeh/core/property/descriptors.py:414(__get__)
+97327/90238    0.117    0.000    1.510    0.000 bases.py:111(_copy_default)
+    12393    0.105    0.000    5.142    0.000 model.py:685(_visit_immediate_value_references)
+    42361    0.103    0.000    0.103    0.000 containers.py:92(__init__)
+162104/156581    0.102    0.000    5.992    0.000 descriptors.py:414(__get__)
 3682/3586    0.100    0.000    0.688    0.000 {built-in method builtins.__build_class__}
+
 
